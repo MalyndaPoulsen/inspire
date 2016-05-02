@@ -1,1 +1,1 @@
-var app = angular.module('inspire', []);
+var app = angular.module('inspire', ['ngSanitize']);

@@ -1,3 +1,50 @@
-body{
-   background: grey url("https://bcw.blob.core.windows.net/public/img/inspire.jpg") center no-repeat;
+htm, body{
+   margin: 0; 
+}
+#weather{
+    float: right;
+    color: white;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+p.capitalize {
+    text-transform: capitalize;
+}
+#time {
+     padding-right: 25px;
+     padding-left:25px;
+    height: 200px; 
+    width:100%;
+    position: fixed;
+    text-align: center;
+    /*left: 0;*/
+    top: 0;
+    
+}
+#time p{
+    font-size: 120px;
+    color: red;
+}
+#Quotes h4{
+    font-style: italic;
+}
+
+ #Quotes{
+    padding-right: 25px;
+     padding-left:25px;
+    color: white;
+    height: 100px; 
+    width:100%;
+    position: fixed;
+    text-align: center;
+    /*left: 0;*/
+    bottom: 0; 
+}
+#Quotes{
+    padding-left: 0px;
+  background-image:
+    linear-gradient( 
+       to top,      
+      black, transparent
+    );
 }
