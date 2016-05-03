@@ -5,12 +5,12 @@
 
 app.controller("TodoController", function() {
     var tc = this;
+        tc.todoList = [];
 
     // DO NOT EDIT ABOVE
     tc.addTask = function(newTask) {
-        tc.todoList = [];
         tc.todoList.push(newTask)
-        tc.newTask = '';
+        // tc.newTask = '';
         tc.taskComplete = 0;
     }
 

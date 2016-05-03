@@ -39,14 +39,14 @@
    
         <form class="form-group" ng-submit="tc.addTask(tc.newTask)">
                 <input placeholder="Task" class="form-control" type="text" ng-model="tc.newTask.task">        
-                <button ng-click="addTask()">Add</button>
+                <button ng-click="addTask(newTask)">Add</button>
                 <button type="reset">Clear</button>
             </form>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <h2>To-Do List..</h2>
-                <ul class="task-list">
+                <ul class="todoList">
                     <li ng-repeat="task in tc.todoList">
                         <strong>{{tc.todoList.task}}</strong> 
                         <span class="badge" ng-click="tc.removeTask($index)">X</span>
