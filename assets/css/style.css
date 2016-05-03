@@ -10,7 +10,17 @@ htm, body{
 p.capitalize {
     text-transform: capitalize;
 }
-#time {
+
+.row-2 span{
+    font-size: 120px;
+    color: red;
+    border-radius:25px;
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-right:15px;
+    
+}
+#time{
      padding-right: 25px;
      padding-left:25px;
     height: 200px; 
@@ -18,33 +28,87 @@ p.capitalize {
     position: fixed;
     text-align: center;
     /*left: 0;*/
-    top: 0;
-    
-}
-#time p{
-    font-size: 120px;
-    color: red;
-}
-#Quotes h4{
-    font-style: italic;
+    top: 100;  
 }
 
  #Quotes{
-    padding-right: 25px;
-     padding-left:25px;
-    color: white;
-    height: 100px; 
-    width:100%;
+
     position: fixed;
-    text-align: center;
-    /*left: 0;*/
-    bottom: 0; 
+    bottom:0;
+    left:0;
+    right:0;
+    text-align:center;
+    margin-bottom: 0px;
 }
-#Quotes{
-    padding-left: 0px;
+
+#Quotes{  
   background-image:
     linear-gradient( 
        to top,      
       black, transparent
     );
+}
+#Quotes:hover h4{
+    margin-top:0px;
+    display: block;
+}
+h4{
+    font-style: italic;
+    display:none;
+    color: white;
+}
+.childQuote {
+    color: white;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+span{
+    font-size:15px;
+}
+#time:hover p{
+    display:block;
+    background-color:white;
+}
+#time:hover h1{
+    
+}
+#time p{
+    border-radius:25px;
+    font-size: 25px;
+    height: 50px;
+    padding-top: -2;
+    padding-bottom: 8px;
+    display:none;
+    color: red;
+    background-color: white;
+    opacity: .50; 
+    filter: alpha(opacity=50);
+    -ms-filter: "alpha(opacity=50)"; 
+    -khtml-opacity: .50;
+    -moz-opacity: .50; 
+}
+.childTime{
+     color: white;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+input{
+    background-color:white;
+    opacity: .50;
+    height:25px;
+    border-radius: 25px;
+}
+.ScrollStyle{
+    margin-top: 50px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.list-group-item{
+    margin-bottom: 27px;
+    margin-top: 25px;
+    padding: 5 0 5 25;
+    color: black;
+   
 }

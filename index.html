@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Inspire</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
 </head>
 
 <body class="image-responsive" ng-controller="ImageController as ic" style="background: url({{ic.imageData.url}}) no-repeat center center fixed; background-size: cover">
+    
+ 
     <div ng-controller="WeatherController as wc">
-
         <div id="weather" class="row">
             <h2>{{wc.weather.name}} {{wc.ftemp}}°</h2>
             <!--<p>humidity: {{wc.weather.main.humidity}}</p>-->
@@ -16,21 +18,43 @@
         </div>
 
         <div class="row-2" id="time">
-            <p>{{wc.weather.dt | date: "hh:mm:ss"}}</p>
+            <div class="childTime">
+                <span>{{wc.weather.dt | date: "hh:mm:ss"}}</span>
+                <p>What is on your mind?
+                    <br> ("Click" to start.)</p>
+            </div>
         </div>
     </div>
 
 
     <div ng-controller="QuoteController as qc">
         <div class="row-3" id="Quotes">
-            <h3 data-ng-bind-html="qc.quote.quote"></h3>
+            <div class="childQuote">
+                <h3 data-ng-bind-html="qc.quote.quote"></h3></div>
             <h4>{{qc.quote.author}}</h4>
         </div>
     </div>
 
     <div ng-controller="TodoController as tc">
+   
+        <form class="form-group" ng-submit="tc.addTask(tc.newTask)">
+                <input placeholder="Task" class="form-control" type="text" ng-model="tc.newTask.task">        
+                <button ng-click="addTask()">Add</button>
+                <button type="reset">Clear</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>To-Do List..</h2>
+                <ul class="task-list">
+                    <li ng-repeat="task in tc.todoList">
+                        <strong>{{tc.todoList.task}}</strong> 
+                        <span class="badge" ng-click="tc.removeTask($index)">X</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    </div>
 
 
 
