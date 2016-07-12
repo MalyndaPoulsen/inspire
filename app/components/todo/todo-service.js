@@ -1,5 +1,5 @@
 app.service('TodoService', function($q, $http){
-	this.getTodos =  function(){
+	this.getTodo =  function(){
 		var t = localStorage.getItem('todo');
 		if(t){
 			console.log('Todo Data:', JSON.parse(t))
@@ -8,8 +8,8 @@ app.service('TodoService', function($q, $http){
 		console.log('Todo Data:', [])
 		return [];
 	}
-	this.saveTodos =  function(todos){
-	localStorage.setItem('todo', JSON.stringify(todos));
-		console.log('Todo Data Saved:', todos);
+	this.saveTodos =  function(todo){
+	localStorage.setItem('todo', JSON.stringify(todo));
+		console.log('Todo Data Saved:', todo);
 	}
 })
